@@ -5,6 +5,16 @@ import { RouterLink } from 'vue-router'
 <template>
   <header>
     <img class="logo" src="@/assets/logo.svg" width="60" height="60">
+    <nav>
+      <div>Services</div>
+      <div>Story</div>
+      <div>Contact us</div>
+      <div>Work task</div>
+      <div>      
+        Login
+      </div>
+
+    </nav>
   </header>
   <router-view></router-view>
 </template>
@@ -27,7 +37,9 @@ header {
 
 nav {
   display: flex;
-  gap: 1rem;
+  gap: 4rem;
+  font-size: 20px;
+  margin-right: 40px;
 }
 
 .nav-item {
