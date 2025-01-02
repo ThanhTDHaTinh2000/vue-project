@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import LearnView from '../views/LearnView.vue'
-import TodoLearnView from '../views/TodoLearnView.vue'
+import CreateView from '../views/CreateView.vue'
+import UpdateView from '../views/UpdateView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,13 +13,13 @@ const router = createRouter({
     },
     {
       path: '/create',
-      name: 'learn',
-      component: LearnView,
+      name: 'create',
+      component: CreateView,
     },
     {
-      path: '/todo/:id',
-      name:'todoLearn',
-      component: TodoLearnView,
+      path: '/update/:id',
+      name:'update',
+      component: UpdateView,
     }
   ],
 })

@@ -5,39 +5,45 @@ import { RouterLink } from 'vue-router'
 <template>
   <header>
     <img class="logo" src="@/assets/logo.svg" width="60" height="60">
-    <nav>
-      <RouterLink to="/">
-        <div class="btn-main">
-          Home learn
-        </div>
-      </RouterLink>
-
-      <div>..</div>
-      
-      <RouterLink to="/create">
-        <div class="btn-learn">
-          Todo learn
-        </div>
-      </RouterLink>
-
-    </nav>
   </header>
-
   <router-view></router-view>
 </template>
 
 <style scoped>
-header{
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 4rem 2rem;
   align-items: center;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
-nav{
+nav {
   display: flex;
-  column-span: 10px;
+  gap: 1rem;
 }
 
+.nav-item {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+  background-color: #f0f0f0;
+}
+
+.logo {
+  cursor: pointer;
+}
 </style>
